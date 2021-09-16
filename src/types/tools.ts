@@ -3,5 +3,5 @@ export interface Tool {
   title: string;
   link: string;
   description: string;
-  tags: [];
+  tags: string[];
 }

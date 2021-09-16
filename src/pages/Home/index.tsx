@@ -1,4 +1,5 @@
 import React from "react";
+import { ToolItem } from "../../components/ToolItem";
 import { useTools } from "../../hooks";
 
 export function HomePage() {
@@ -9,7 +10,7 @@ export function HomePage() {
       {!tools ? (
         <p>carregando os dados...</p>
       ) : (
-        tools.map((tool, index) => <p key={index}>{tool.title}</p>)
+        tools.map((tool, index) => <ToolItem tool={tool} key={index} />)
       )}
     </React.Fragment>
   );
