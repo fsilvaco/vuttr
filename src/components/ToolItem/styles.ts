@@ -8,8 +8,13 @@ export const ToolContainer = styled.div.attrs({ className: "tool-item" })`
     margin-bottom: 2rem;
   }
   .tool-item {
-    &__title {
-      margin-bottom: 0.5rem;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+
+      &__title {
+        margin-bottom: 0.5rem;
+      }
     }
 
     &__description {

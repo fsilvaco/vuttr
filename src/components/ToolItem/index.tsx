@@ -1,5 +1,7 @@
-import React from "react";
 import { Tool } from "../../types";
+import { Button } from "../Button";
+
+import { MdClose } from "react-icons/md";
 
 import { ToolContainer } from "./styles";
 
@@ -11,7 +13,16 @@ export const ToolItem = ({ tool }: ToolsProps) => {
   return (
     <ToolContainer>
       <div className="tool-item">
-        <h3 className="tool-item__title">{tool.title}</h3>
+        <div className="tool-item__header">
+          <h3 className="tool-item__header__title">{tool.title}</h3>
+          <Button
+            title="Remove"
+            backgroundColor="blue"
+            titleColor="white"
+            icon={<MdClose />}
+            onClick={() => {}}
+          />
+        </div>
         <p className="tool-item__description">{tool.description}</p>
         <ul className="tool-item__tags">
           {tool.tags.map((tag, index) => (
