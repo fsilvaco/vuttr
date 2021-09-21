@@ -36,3 +36,28 @@ export const ToolContainer = styled.div.attrs({ className: "tool-item" })`
     }
   }
 `;
+
+export const RemoveToolsDialog = styled.div.attrs({
+  className: "remove-tools-section",
+})`
+  background-color: #fff;
+  width: 30vw;
+  padding: 2rem;
+
+  .remove-tools-container__body {
+    margin-top: 0.8rem;
+  }
+
+  .remove-tools-container__footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 1.6rem;
+
+    button {
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+`;

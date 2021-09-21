@@ -7,7 +7,7 @@ import { Dialog } from "../Dialog";
 
 import { useDialog } from "../../hooks";
 
-import { ToolContainer } from "./styles";
+import { ToolContainer, RemoveToolsDialog } from "./styles";
 
 interface ToolsProps {
   tool: Tool;
@@ -41,8 +41,31 @@ export const ToolItem = ({ tool }: ToolsProps) => {
         </div>
       </ToolContainer>
 
-      <Dialog toggle={show}>
-        <Button title="Fechar Dialog" onClick={() => handleClose()} />
+      <Dialog onClick={() => handleClose()} toggle={show}>
+        <RemoveToolsDialog>
+          <div className="remove-tools-container__header">
+            <h2>Remove tool</h2>
+          </div>
+          <div className="remove-tools-container__body">
+            <p>
+              Are you sure want to remove <b>{tool.title}?</b>
+            </p>
+          </div>
+          <div className="remove-tools-container__footer">
+            <Button
+              title="Cancel"
+              onClick={() => {
+                handleClose();
+              }}
+            />
+            <Button
+              title="Yes, remove"
+              onClick={() => {
+                handleClose();
+              }}
+            />
+          </div>
+        </RemoveToolsDialog>
       </Dialog>
     </>
   );

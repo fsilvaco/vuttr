@@ -9,6 +9,6 @@ export const LayoutContainer = styled.div.attrs({
   justify-content: center;
 
   .layout-container__wrapper {
-    max-width: 920px;
+    max-width: 70vw;
   }
 `;
